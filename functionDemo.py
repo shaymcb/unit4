@@ -4,5 +4,28 @@
 
 def hw():
     print('hello, world')
+    
+def double(thingToDouble):
+    print(thingToDouble * 2)
 
+def bigger(a,b):
+    if a>b:
+        print(a)
+    else:
+        print(b)
 
+def slope(x1, y1, x2, y2):
+    print((y2-y1)/(x2-x1))
+
+slope(1,-1,2,2)
+slope(True,True,False,False) #sketchy
+
+"""
+bigger(4,3)
+bigger('hi','hoe you thought')
+bigger(False,True)
+
+double(12)
+double('w')
+double(True)
+"""
