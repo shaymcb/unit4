@@ -15,3 +15,4 @@ def mouseClick(event):
         color = color+rand
     
     background = RectangleAsset(600,1200,outline,color)
+    Sprite(background)
