@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-outline = LineStyle(0,Color(0x000000,1)
+outline = LineStyle(0,Color(0x000000,1))
 
 def mouseClick(event):
     color = '0x'
@@ -14,5 +14,8 @@ def mouseClick(event):
         rand = str(rand)
         color = color+rand
     
-    background = RectangleAsset(600,1200,outline,color)
+    background = RectangleAsset(600,1200,outline,Color(color,1))
     Sprite(background)
+    
+App.listenMouseEvent('click',mouseClick)
+App().run()
