@@ -14,7 +14,7 @@ def mouseClick(event):
         rand = str(rand)
         color = color+rand
     
-    background = RectangleAsset(600,1200,outline,Color(color,1))
+    background = RectangleAsset(1200,600,outline,Color(color,1))
     Sprite(background)
     
 App.listenMouseEvent('click',mouseClick)
