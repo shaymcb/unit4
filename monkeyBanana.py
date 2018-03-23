@@ -6,7 +6,7 @@ from ggame import *
 from random import randint
 
 #constants
-ROWS = 28  #all caps for constants
+ROWS = 26  #all caps for constants
 COLS = 50
 CELL_SIZE = 20
 
@@ -45,7 +45,9 @@ def moveBanana():
 
 def updateScore():
     data['score'] += 10
-    print(data['score'])
+    data['scoreText'].destroy() #remove old writing
+    scoreBox = TextAsset('Score = '+str(data['score']))
+    data['scoreText'] = Sprite(scoreBox,(0,ROWS*CELL_SIZE))
 
 if __name__ == '__main__':
     
@@ -66,7 +68,7 @@ if __name__ == '__main__':
     Sprite(jungleBox)
     monkey = Sprite(monkeyBox)
     banana = Sprite(bananaBox,(CELL_SIZE*COLS/2,CELL_SIZE*ROWS/2))
-    Sprite(scoreBox,(0,ROWS*CELL_SIZE)
+    data['scoreText'] = Sprite(scoreBox,(0,ROWS*CELL_SIZE))
     
     App().listenKeyEvent('keydown','right arrow',moveRight)
     App().listenKeyEvent('keydown','left arrow',moveLeft)
