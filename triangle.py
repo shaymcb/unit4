@@ -10,7 +10,8 @@ def distance(x1,y1,x2,y2):
 
 def fuckingHeron(a,b,c):
     s = 1/2 * (a+b+c)
-    area = sqrt(
+    area = sqrt(s*(s-a)*(s-b)*(s-c))
+    return round(area,3)
     
 
 if __name__ == '__main__':  
