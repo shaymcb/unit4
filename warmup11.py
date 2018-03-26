@@ -9,7 +9,7 @@ def prime(num):
         if num%i == 0:
             num = num/i
             divisors += 1
-            i += 1
-    print(divisors == 0)
+        i += 1
+    return(divisors == 0)
 
-prime(5)
+print(prime(58))
