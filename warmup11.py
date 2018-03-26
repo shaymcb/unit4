@@ -12,4 +12,4 @@ def prime(num):
         i += 1
     return(divisors == 0)
 
-print(prime(58))
+print(prime(5))
