@@ -37,7 +37,7 @@ if __name__ == "__main__":
         if num1 + num2 == answer:
             numberCorrect += 1
             if numberCorrect%5 == 0:
-                encourage()
+                print(encourage())
         else:
             print("Sorry, incorrect.")
 
