@@ -34,10 +34,10 @@ if __name__ == "__main__":
         num2 = randint(1,12)
         print(num1,'+',num2,"=")
         answer = float(input('?'))
-        elif num1 + num2 != answer:
-            print("Sorry, incorrect.")
-        else:
+        if num1 + num2 == answer:
             numberCorrect += 1
-            if numberCorrect%5 = 0:
+            if numberCorrect%5 == 0:
                 encourage()
+        else:
+            print("Sorry, incorrect.")
 
