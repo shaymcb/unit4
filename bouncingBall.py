@@ -5,16 +5,17 @@
 from ggame import *
 
 #Contants
-XBOUND = 500
-YBOUND = 1000
+XBOUND = 950
+YBOUND = 500
+OFFSET = 50
 
 def moveBall():
     ball.x += data['xspeed']
     ball.y += data['yspeed']
-    if ball.x == XBOUND or ball.x == 0:
-        ybounce()
-    if ball.y == YBOUND or ball.y == 0:
+    if ball.x == XBOUND - 50 or ball.x == OFFSET:
         xbounce()
+    if ball.y == YBOUND - 50 or ball.y == OFFSET:
+        ybounce()
     
 def ybounce():
     data['yspeed'] = -1 * data['yspeed']
@@ -29,10 +30,10 @@ if __name__ == '__main__':
     
     #shapes
     ballShape = CircleAsset(25,LineStyle(0,Color(0x000000,1)),Color(0x0000FF,1))
-    rectangle = RectangleAsset(XBOUND-100,YBOUND-100,LineStyle(1,Color(0x000000,1),Color(0xFFFFFF,1)))
+    rectangle = RectangleAsset(XBOUND-OFFSET,YBOUND-OFFSET,LineStyle(1,Color(0x000000,1)),Color(0xFFFFFF,1))
     
-    ball=Sprite(ballShape)
-    Sprite(rectangle,(100,100))
+    Sprite(rectangle,(OFFSET,OFFSET))
+    ball=Sprite(ballShape,(OFFSET,OFFSET))
     
     App().run(moveBall)
 
