@@ -31,7 +31,9 @@ if __name__ == '__main__':
     #shapes
     ballShape = CircleAsset(25,LineStyle(0,Color(0x000000,1)),Color(0x0000FF,1))
     rectangle = RectangleAsset(XBOUND-OFFSET,YBOUND-OFFSET,LineStyle(1,Color(0x000000,1)),Color(0xFFFFFF,1))
+    background = RectangleAsset(1500,700,LineStyle(1,Color(0x000000,1)),Color(0x000000,1))
     
+    Sprite(background)
     Sprite(rectangle,(OFFSET,OFFSET))
     ball=Sprite(ballShape,(OFFSET,OFFSET))
     
