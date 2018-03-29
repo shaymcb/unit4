@@ -12,9 +12,9 @@ OFFSET = 50
 def moveBall():
     ball.x += data['xspeed']
     ball.y += data['yspeed']
-    if ball.x == XBOUND - 50 or ball.x == OFFSET:
+    if ball.x >= XBOUND - 50 or ball.x <= OFFSET:
         xbounce()
-    if ball.y == YBOUND - 50 or ball.y == OFFSET:
+    if ball.y >= YBOUND - 50 or ball.y <= OFFSET:
         ybounce()
     
 def ybounce():
@@ -25,8 +25,8 @@ def xbounce():
 
 if __name__ == '__main__':
     data = {}
-    data['xspeed'] = 2
-    data['yspeed'] = 2
+    data['xspeed'] = 3
+    data['yspeed'] = 4
     
     #shapes
     ballShape = CircleAsset(25,LineStyle(0,Color(0x000000,1)),Color(0x0000FF,1))
